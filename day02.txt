@@ -125,7 +125,7 @@ git pull origin main --allow-unrelated-histories
 -------------------------
 
 1. 오거나이제이션 생성
-2. 팀원 초대
+2. 팀원 초대 - people tap에서 초대 invite member - 일단 owner 권한으로 초대
 3. 프로젝트 구조 생성 (dev branch)
 4. git clone
 5. dev 생성 및 이동 -> 동기화
