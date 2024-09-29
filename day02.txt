@@ -18,3 +18,75 @@ git : 형상관리
 -----------------------------------
 
 폴더 경로 -> 로컬 깃 저장소 생성 -> 파일 선택 -> 로컬 저장소에 저장
+
+README.md (md -> 마크다운)
+-> 프로젝트의 개요, 환경 설정 방법
+
+RTFM
+LGTM
+
+Pull Request (PR)
+-> 나 이 코드 원래 브랜치에 합칠 예정인데
+-> 수정한 거 확인 해줘, 맥락 공유, 의견
+
+ISSUES
+-> 이슈 작성
+-> 에러
+
+git hub 계정
+윈도우 -> 자격 증명 관리자 -> Windows 자격 증명
+
+
+깃허브와 컴퓨터의 깃 저장소 연결
+
+1. (최초 1회)
+git config --global user.name "닉네임"
+git config --global user.email "이메일"
+
+2. (최초 1회) push/pull -> 인증이 안 되어 있으면 인터넷 창이 나와서 계정 연결
+
+3. push / pull
+
+git push 원격저장소명 브랜치명
+
+---------------
+원격 저장소를 .git 폴더와 연결
+git remote add 원격저장소명(origin) 원격저장소URL
+git remote remove 원격저장소명
+확인 
+git remote
+
+default branch -- 주된 브랜치
+master, main
+
+github-flow
+
+---- main(ver1.0.0) (default branch) -- 현재 서비스 중인 브랜치
+---- dev(ver1.0.0) ---
+------- main(ver1.0.0) --- feat/login ---dev(staging)
+                    --- feat/sign-up
+---------------dev(staging) -- QA
+--------------------- main(ver1.1.0)
+
+git push origin master(main)
+-- 오류
+-- vscode(.git 로컬 저장소)의 branch 이름은 master이나 main으로 보내려 하여 발생
+-- git 로컬 저장소의 branch 위치를 main으로 이동
+
+git branch(로컬 저장소에 브랜치가 무엇이 있는지 목록 확인)
+*master
+
+-- main 으로 이동해야함
+-- main 브랜치 생성
+
+원하는 위치의 브랜치로 이동 후 브랜치 생성해야 함
+git checkout dev
+
+개발은 여럿이 하기 때문에 원격과 로컬의 소스가 다를 수 있음
+최신 버전으로 동기화 필요
+
+git pull 원격저장소명(origin) 브랜치명(dev)
+
+git branch 브랜치명
+
+
